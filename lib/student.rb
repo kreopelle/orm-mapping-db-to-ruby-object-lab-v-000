@@ -5,6 +5,9 @@ class Student
     sql = <<-SQL
     SELECT * FROM students where grade = 9
     SQL
+
+    DB[:conn].execute(sql)
+
   end
 
   def self.new_from_db(row)
